@@ -141,7 +141,7 @@ function init(e) {
   if (typeof web3 !== "undefined") {
     // Use Mist/MetaMask's provider
     web3js = new Web3(web3.currentProvider);
-    userAccount = web3.currentProvider.selectedAddress;
+    //userAccount = web3.currentProvider.selectedAddress;
     var contractAddress = "0xE81376a05E05B84400aE7ECF080E16554af90b6A";
     contract = new web3js.eth.Contract(coinFlipABI, contractAddress);
 
