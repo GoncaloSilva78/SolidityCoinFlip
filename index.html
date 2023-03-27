@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Coin Flip</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="css/coinFlip.css" />
+    <link rel="stylesheet" type="text/css" href="css/simple-notify.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
+      integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/coinflip_abi.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="js/coinFlip.js"></script>
+    <script src="js/simple-notify.min.js"></script>
+  </head>
+
+  <body style="background: #1f5a82">
+    <div class="container col-7 row" style="position: absolute">
+      <div class="col-6">
+        <p
+          class="contractLiquidity"
+          style="
+            font-family: nunito, roboto, proxima-nova, 'proxima nova',
+              sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+          "
+        ></p>
+      </div>
+
+      <div class="col-6 loginDiv" style="text-align: right">
+        <button
+          style="width: 50%; text-align: center"
+          id="login"
+          class="button-wallet"
+        >
+          Connect Wallet
+        </button>
+      </div>
+
+      <div class="coin col-12" style="text-align: center" id="coin">
+        <div class="heads">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/02/Red_Circle%28small%29.svg/2048px-Red_Circle%28small%29.svg.png"
+          />
+        </div>
+        <div class="tails">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Eo_circle_green_blank.svg/2048px-Eo_circle_green_blank.svg.png"
+          />
+        </div>
+      </div>
+
+      <div class="stats col-12">
+        <p class="col-6" style="text-align: center">
+          RED: <span id="red-count">0</span>
+        </p>
+        <p class="col-6" style="text-align: center">
+          GREEN: <span id="green-count">0</span>
+        </p>
+      </div>
+
+      <div class="col-12">
+        <p class="consecutiveWins"></p>
+      </div>
+
+      <div class="form-outline col-12">
+        <input
+          type="number"
+          id="entryFee"
+          class="form-control"
+          placeholder="Amount to play"
+        />
+      </div>
+
+      <div class="choices col-12" style="margin-top: 10px; margin-bottom: 30px">
+        <button style="width: 49.7%" class="choice button-red" id="redCoin">
+          RED
+        </button>
+        <button style="width: 49.7%" class="choice button-green" id="greenCoin">
+          GREEN
+        </button>
+      </div>
+
+      <div class="buttons col-12">
+        <button id="flip-button" class="button-flip">FLIP COIN</button>
+      </div>
+    </div>
+  </body>
+</html>
