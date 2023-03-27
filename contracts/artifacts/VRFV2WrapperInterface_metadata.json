@@ -1,0 +1,128 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "_callbackGasLimit",
+						"type": "uint32"
+					}
+				],
+				"name": "calculateRequestPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint32",
+						"name": "_callbackGasLimit",
+						"type": "uint32"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_requestGasPriceWei",
+						"type": "uint256"
+					}
+				],
+				"name": "estimateRequestPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lastRequestId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"calculateRequestPrice(uint32)": {
+					"details": "This function relies on the transaction gas price which is not automatically set duringsimulation. To estimate the price at a specific gas price, use the estimatePrice function.",
+					"params": {
+						"_callbackGasLimit": "is the gas limit used to estimate the price."
+					}
+				},
+				"estimateRequestPrice(uint32,uint256)": {
+					"details": "This is a convenience function that can be called in simulation to better understandpricing.",
+					"params": {
+						"_callbackGasLimit": "is the gas limit used to estimate the price.",
+						"_requestGasPriceWei": "is the gas price in wei used for the estimation."
+					}
+				},
+				"lastRequestId()": {
+					"returns": {
+						"_0": "the request ID of the most recent VRF V2 request made by this wrapper. This should only be relied option within the same transaction that the request was made."
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"calculateRequestPrice(uint32)": {
+					"notice": "Calculates the price of a VRF request with the given callbackGasLimit at the currentblock."
+				},
+				"estimateRequestPrice(uint32,uint256)": {
+					"notice": "Estimates the price of a VRF request with a specific gas limit and gas price."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/CoinFlip.sol_flattened.sol": "VRFV2WrapperInterface"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/CoinFlip.sol_flattened.sol": {
+			"keccak256": "0x7b554dde85a6a9ca03604d07c8e163bd77a4a3fc79233621fa27d313d4834ca3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://adfadfffb885151520849aa02078884c97913046ec7791040d276b9b02024e46",
+				"dweb:/ipfs/QmY95BVLSu1AGeo9VTCsdAhsCMUSq1kUShcSvd8qAHjYoU"
+			]
+		}
+	},
+	"version": 1
+}
